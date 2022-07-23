@@ -159,5 +159,39 @@ void IF_prisoner() {
 }
 
 void SLE() {
+	float a, b, c, d, e, f;
+	cin >> a >> b >> c >> d >> e >> f;
 
+	if (a == 0 && b == 0 && c == 0 && d == 0 && e == 0 && f == 0) {
+		cout << 5;
+	}
+
+	else if ((a * d == b * c && a * f != c * e) ||
+		(a == 0 && b == 0 && e != 0) ||
+		(c == 0 && d == 0 && f != 0) ||
+		(a == 0 && c == 0 && b * f != d * e) ||
+		(b == 0 && d == 0 && a * f != c * e)) {
+		cout << 0;
+	}
+
+	else if (a * d == b * c && a * f == c * e) {
+		if (b == 0 && d == 0) {
+			if (a != 0) cout << 3 << " " << e / a;
+			else if (c != 0) cout << 3 << " " << f / c;
+		}
+
+		else if (a == 0 && c == 0) {
+			if (b != 0) cout << 4 << " " << e / b;
+			else if (d != 0) cout << 4 << " " << f / d;
+		}
+
+		else if (b != 0) cout << 1 << " " << -a / b << " " << e / b;
+		else cout << 1 << " " << -c / d << " " << f / d;
+	}
+
+	else {
+		float x = (e * d - b * f) / (a * d - b * c);
+		float y = (a * f - e * c) / (a * d - b * c);
+		cout << 2 << " " << x << " " << y;
+	}
 }
