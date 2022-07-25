@@ -170,3 +170,61 @@ void nearest_number() {
 
     cout << res;
 }
+
+void bigger_neighbors() {
+    string s;
+
+    getline(cin, s);
+
+    stringstream iss(s);
+
+    int number;
+    vector<int> numbers;
+    while (iss >> number)
+        numbers.push_back(number);
+
+    int count = 0;
+
+    for (int i = 1; i < numbers.size() - 1; i++) {
+        if ((numbers[i] > numbers[i - 1]) && (numbers[i] > numbers[i + 1])) count++;
+    }
+
+    cout << count;
+}
+
+void cows_game() {
+    int n;
+    cin >> n;
+
+    vector<int> results;
+    int Vas_results_loc = -1;
+
+    int max = 0, first_max_loc = 0;
+
+    for (int i = 0; i < n; i++) {
+        int num;
+        cin >> num;
+        results.push_back(num);
+        if (num > max) {
+            max = num;
+            first_max_loc = i;
+        }
+    }
+
+    for (int i = first_max_loc + 1; i < n - 1; i++) {
+        int res = results[i];
+        if (res % 10 == 5 && res > results[i + 1] && res > Vas_results_loc)
+            Vas_results_loc = res;
+    }
+
+    if (Vas_results_loc == -1) cout << 0;
+    else {
+        int place = 1;
+        for (int i = 0; i < n; i++) {
+            if (results[i] > Vas_results_loc) place++;
+        }
+        cout << place;
+    }
+    
+
+}

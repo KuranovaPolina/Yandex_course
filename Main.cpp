@@ -10,8 +10,6 @@
 using namespace std;
 
 int main(void) {
-	//SLE();
-
-	nearest_number();
+	cows_game();
 }
 
