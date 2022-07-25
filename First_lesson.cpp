@@ -92,6 +92,26 @@ void Equation_with_root() {
 }
 
 void Ambulance() {
+	/*int K1, P1, N1, M, K2, P2, N2, T;
+
+	cin >> K1 >> M >> K2 >> P2 >> N2;
+
+	if (K2 == 1) {
+		P1 = 0;
+		if (M != 1) N1 = 0;
+		else N1 = 1;
+	}
+
+	else {
+		T = (--K1) * ((--P2) * (--M) + (--N2)) / (--K2);
+
+		P1 = T / M + 1;
+		N1 = T % M;
+	}
+
+	if (N1 > 0 && N1 <= M)	cout << P1 << " " << N1;
+	else cout << -1 << " " << -1;*/
+
 
 }
 
