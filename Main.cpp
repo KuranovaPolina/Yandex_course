@@ -12,6 +12,6 @@ using namespace std;
 int main(void) {
 	//SLE();
 
-	sequence_type();
+	nearest_number();
 }
 

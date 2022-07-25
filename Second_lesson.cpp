@@ -144,3 +144,29 @@ void sequence_type() {
     else cout << "RANDOM";
     
 };
+
+void nearest_number() {
+    int N;
+    cin >> N;
+
+    vector<int> numbers;
+    for (int i = 0; i < N; i++) {
+        int number;
+        cin >> number;
+        numbers.push_back(number);
+    }
+
+    int x; 
+    cin >> x;
+
+    int res = numbers[0], distance = abs(x - numbers[0]);
+    
+    for (int i = 1; i < N; i++) {
+        if (abs(x - numbers[i]) < distance) {
+            distance = abs(x - numbers[i]);
+            res = numbers[i];
+        }
+    }
+
+    cout << res;
+}
