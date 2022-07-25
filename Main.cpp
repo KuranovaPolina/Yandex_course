@@ -12,6 +12,6 @@ using namespace std;
 int main(void) {
 	//SLE();
 
-    is_grow();
+	sequence_type();
 }
 

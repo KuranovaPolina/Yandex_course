@@ -21,9 +21,15 @@
     <ClCompile Include="First_lesson.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Second_lesson.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="First_lesson.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Second_lesson.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
